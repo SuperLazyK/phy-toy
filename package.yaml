@@ -1,0 +1,45 @@
+name:                phy-toy
+version:             0.1.0.0
+github:              "ksgm-of-ksgms/phy-toy"
+license:             BSD3
+author:              "ksgm"
+maintainer:          "ksgm"
+copyright:           "2020 ksgm"
+
+extra-source-files:
+- README.md
+
+description:         Please see the README on GitHub at <https://github.com/ksgm-of-ksgms/phy-toy#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- lens
+- containers
+- gloss
+- random
+- linear
+- aeson
+- bytestring
+- mtl
+- hip
+
+library:
+  source-dirs: src
+
+
+executables:
+  phy-toy-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - phy-toy
+
+
+default-extensions:
+- TypeOperators
+- TypeApplications
+
